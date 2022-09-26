@@ -1,8 +1,9 @@
 :root {
-  --input-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
-  --red: hsl(0, 100%, 66%);
-  --white: hsl(0, 0%, 100%;);
-  --light-violet: hsl(270, 3%, 87%);
-  --dark-violet: hsl(279, 6%, 55%);
-  --very-dark-violet: hsl(278, 68%, 11%);
+  --input-gradient: #6448fe to #600594;
+  --red: #ff5252;
+  --white: #ffffff;
+  --offwhite: #f2f2f2;
+  --light-violet: #dedddf;
+  --dark-violet: #8e8593;
+  --very-dark-violet: #21092f;
 }
