@@ -1,0 +1,32 @@
+#app {
+  height: 100%;
+}
+
+#sidebar {
+  background-image: url('/public/imgs/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  border: 1px solid red;
+  /* margin: 10rem; */
+}
+
+.cards,
+.card-form {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: 1px solid red;
+}
