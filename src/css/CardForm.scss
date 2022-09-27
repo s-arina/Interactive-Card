@@ -1,0 +1,49 @@
+.card-form {
+  #card-info {
+    font-family: 'Space-Grotesk';
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    label {
+      margin-bottom: 1rem;
+    }
+    input {
+      margin-bottom: 2rem;
+      width: 100%;
+      padding: 1rem 1.5rem;
+      border-radius: 0.5rem;
+      border: 1px solid lightgrey;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font-family: 'Space-Grotesk';
+        color: darkgrey;
+      }
+    }
+    .date-cvc {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      input {
+        margin: 0;
+      }
+    }
+    .exp-date,
+    .cvc {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .date {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+}

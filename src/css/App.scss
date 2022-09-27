@@ -16,11 +16,10 @@
 #content {
   display: flex;
   justify-content: space-between;
-  // align-items: center;
   flex-wrap: wrap;
   height: 100%;
   border: 1px solid red;
-  padding: 5rem;
+  padding: 10rem;
 }
 
 .cards,
@@ -29,7 +28,7 @@
   flex: 1;
   justify-content: center;
   align-items: center;
-  // height: 100%;
+  width: 100%;
   border: 1px solid blue;
   padding: 5rem;
 }
@@ -40,15 +39,21 @@
   img {
     width: 40rem;
     &:nth-child(1) {
-      align-self: flex-start;
+      margin-right: auto;
+      // align-self: flex-start;
     }
     &:nth-child(2) {
-      align-self: flex-end;
+      margin-left: auto;
+      // align-self: flex-end;
     }
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 704px) {
+  #content {
+    padding: 5rem;
+  }
+
   .cards,
   .cards-form {
     padding: 0;
@@ -57,10 +62,10 @@
   .cards img {
     width: 35rem;
     &:nth-child(1) {
-      align-self: auto;
+      margin: 0 auto;
     }
     &:nth-child(2) {
-      align-self: auto;
+      margin: 0 auto;
     }
   }
 }

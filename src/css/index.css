@@ -1,7 +1,6 @@
 @font-face {
-  font-family: Space-Grotesk;
-  src: url(https://fonts.google.com/specimen/Space+Grotesk);
-  font-weight: 500;
+  font-family: 'Space-Grotesk';
+  src: url('/public/fonts/Space-Grotesk.ttf');
 }
 
 * {
