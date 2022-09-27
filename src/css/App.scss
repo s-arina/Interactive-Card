@@ -1,0 +1,66 @@
+#app {
+  // height: 100vh;
+  height: 100%;
+}
+
+#sidebar {
+  background-image: url('/public/imgs/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+#content {
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  border: 1px solid red;
+  padding: 5rem;
+}
+
+.cards,
+.card-form {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  // height: 100%;
+  border: 1px solid blue;
+  padding: 5rem;
+}
+
+.cards {
+  flex-direction: column;
+  gap: 4rem;
+  img {
+    width: 40rem;
+    &:nth-child(1) {
+      align-self: flex-start;
+    }
+    &:nth-child(2) {
+      align-self: flex-end;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .cards,
+  .cards-form {
+    padding: 0;
+  }
+
+  .cards img {
+    width: 35rem;
+    &:nth-child(1) {
+      align-self: auto;
+    }
+    &:nth-child(2) {
+      align-self: auto;
+    }
+  }
+}

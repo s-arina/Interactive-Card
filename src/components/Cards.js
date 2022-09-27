@@ -3,7 +3,16 @@ import React from 'react';
 function Cards(props) {
   return (
     <div className='cards'>
-      <h1>cards</h1>
+      <img
+        src='/imgs/bg-card-front.png'
+        className='card-front'
+        alt='card front'
+      />
+      <img
+        src='/imgs/bg-card-back.png'
+        className='card-back'
+        alt='card front'
+      />
     </div>
   );
 }
