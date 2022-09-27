@@ -1,5 +1,5 @@
 .cards {
-  .front {
+  .card-front {
     position: relative;
     .card-logo {
       width: 7rem;
@@ -23,6 +23,27 @@
         display: flex;
         justify-content: space-between;
         font-size: 1.2rem;
+      }
+    }
+  }
+  .card-back {
+    position: relative;
+    .cvc {
+      font-family: 'Space-Grotesk';
+      font-size: 1.8rem;
+      position: absolute;
+      color: var(--offwhite);
+      right: 12%;
+      top: 43%;
+    }
+  }
+}
+
+@media screen and (max-width: 704px) {
+  .cards {
+    .card-front {
+      .info {
+        font-size: 2.1rem;
       }
     }
   }

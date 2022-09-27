@@ -3,13 +3,19 @@ import '../css/CardForm.css';
 
 function CardForm({ data, setData, input, setInput }) {
   function onChange(e) {
+    e.preventDefault();
     let val = e.target.value;
 
     if (e.target.name === 'number') {
       setInput({
         ...input,
-        number: val.replace(/\W/gi, '').replace(/(.{4})/g, '$1 '),
+        number: val
+          .replace(/\W/gi, '')
+          .replace(/(.{4})/g, '$1 ')
+          .trim(),
       });
+    } else if (e.target.name === 'name') {
+      setInput({ ...input, name: val.toUpperCase() });
     } else {
       setInput({ ...input, [e.target.name]: e.target.value });
     }
@@ -29,8 +35,10 @@ function CardForm({ data, setData, input, setInput }) {
           id='name'
           name='name'
           placeholder='e.g. Jane Appleseed'
+          maxLength={29}
+          pattern='[a-zA-Z]+'
           onChange={(e) => onChange(e)}
-          // required
+          required
         />
         <label htmlFor='number'>CARD NUMBER</label>
         <input
@@ -38,10 +46,11 @@ function CardForm({ data, setData, input, setInput }) {
           id='number'
           name='number'
           placeholder='e.g. 1234 5678 9123 0000'
-          onChange={(e) => onChange(e)}
-          maxLength={16}
+          maxLength={19}
           value={input.number}
-          // required
+          onChange={(e) => onChange(e)}
+          pattern='[0-9 ]+{19}'
+          required
         />
         <div className='date-cvc'>
           <div className='exp-date'>
@@ -54,7 +63,8 @@ function CardForm({ data, setData, input, setInput }) {
                 placeholder='MM'
                 maxLength={2}
                 onChange={(e) => onChange(e)}
-                // required
+                pattern='0[1-9]|1[0-2]'
+                required
               />
               <input
                 type='text'
@@ -63,7 +73,8 @@ function CardForm({ data, setData, input, setInput }) {
                 placeholder='YY'
                 maxLength={2}
                 onChange={(e) => onChange(e)}
-                // required
+                pattern='[0-9]{2}'
+                required
               />
             </div>
           </div>
@@ -76,7 +87,8 @@ function CardForm({ data, setData, input, setInput }) {
               placeholder='e.g. 123'
               maxLength={3}
               onChange={(e) => onChange(e)}
-              // required
+              pattern='[0-9]{3}'
+              required
             />
           </div>
         </div>
