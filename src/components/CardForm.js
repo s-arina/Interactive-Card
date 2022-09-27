@@ -17,21 +17,41 @@ function CardForm(props) {
           type='text'
           id='card-number'
           placeholder='e.g. 1234 5678 9123 0000'
+          maxLength={16}
           required
         />
         <div className='date-cvc'>
           <div className='exp-date'>
             <label htmlFor='date'>EXP. DATE (MM/YY)</label>
             <div className='date'>
-              <input type='number' id='month' placeholder='MM' required />
-              <input type='number' id='year' placeholder='YY' required />
+              <input
+                type='text'
+                id='month'
+                placeholder='MM'
+                maxLength={2}
+                required
+              />
+              <input
+                type='text'
+                id='year'
+                placeholder='YY'
+                maxLength={2}
+                required
+              />
             </div>
           </div>
           <div className='cvc'>
             <label htmlFor='cvc'>CVC</label>
-            <input type='number' id='cvc' placeholder='e.g. 123' required />
+            <input
+              type='text'
+              id='cvc'
+              placeholder='e.g. 123'
+              maxLength={3}
+              required
+            />
           </div>
         </div>
+        <button>Confirm</button>
       </form>
     </div>
   );

@@ -10,7 +10,7 @@
   width: 30%;
   height: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
 }
 
 #content {
@@ -36,16 +36,18 @@
 .cards {
   flex-direction: column;
   gap: 4rem;
-  img {
+  .card-front {
     width: 40rem;
-    &:nth-child(1) {
-      margin-right: auto;
-      // align-self: flex-start;
-    }
-    &:nth-child(2) {
-      margin-left: auto;
-      // align-self: flex-end;
-    }
+    margin-right: auto;
+    z-index: -1;
+  }
+  .card-back {
+    width: 40rem;
+    margin-left: auto;
+    z-index: -1;
+  }
+  img {
+    width: 100%;
   }
 }
 
@@ -59,13 +61,17 @@
     padding: 0;
   }
 
-  .cards img {
-    width: 35rem;
-    &:nth-child(1) {
+  .cards {
+    .card-front {
+      width: 35rem;
       margin: 0 auto;
     }
-    &:nth-child(2) {
+    .card-back {
+      width: 35rem;
       margin: 0 auto;
     }
+  }
+  img {
+    width: 100%;
   }
 }

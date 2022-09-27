@@ -88,4 +88,16 @@
   display: flex;
   gap: 0.5rem;
 }
+
+.card-form button {
+  font-family: 'Space-Grotesk';
+  font-size: 1.6rem;
+  background-color: var(--very-dark-violet);
+  background-color: #21092f;
+  color: var(--offwhite);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-top: 3rem;
+}
 /*# sourceMappingURL=CardForm.css.map */

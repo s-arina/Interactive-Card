@@ -1,0 +1,29 @@
+.cards {
+  .front {
+    position: relative;
+    .card-logo {
+      width: 7rem;
+      position: absolute;
+      top: 2.5rem;
+      left: 2.5rem;
+    }
+    .info {
+      font-family: 'Space-Grotesk';
+      font-size: 2.5rem;
+      letter-spacing: 1.4px;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 2.5rem;
+      color: var(--offwhite);
+      .name-date {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

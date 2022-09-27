@@ -9,7 +9,7 @@
   width: 30%;
   height: 100%;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
 }
 
 #content {
@@ -53,16 +53,20 @@
   gap: 4rem;
 }
 
-.cards img {
+.cards .card-front {
   width: 40rem;
-}
-
-.cards img:nth-child(1) {
   margin-right: auto;
+  z-index: -1;
 }
 
-.cards img:nth-child(2) {
+.cards .card-back {
+  width: 40rem;
   margin-left: auto;
+  z-index: -1;
+}
+
+.cards img {
+  width: 100%;
 }
 
 @media screen and (max-width: 704px) {
@@ -73,14 +77,16 @@
   .cards-form {
     padding: 0;
   }
-  .cards img {
+  .cards .card-front {
     width: 35rem;
-  }
-  .cards img:nth-child(1) {
     margin: 0 auto;
   }
-  .cards img:nth-child(2) {
+  .cards .card-back {
+    width: 35rem;
     margin: 0 auto;
+  }
+  img {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=App.css.map */
