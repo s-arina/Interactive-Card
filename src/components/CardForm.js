@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/CardForm.css';
+import Reset from './Reset';
 
 function CardForm({ data, setData, input, setInput }) {
   function onChange(e) {
@@ -36,8 +37,9 @@ function CardForm({ data, setData, input, setInput }) {
           name='name'
           placeholder='e.g. Jane Appleseed'
           maxLength={29}
-          pattern='[a-zA-Z]+'
+          pattern='[a-zA-Z\. ]+'
           onChange={(e) => onChange(e)}
+          value={input.name}
           required
         />
         <label htmlFor='number'>CARD NUMBER</label>
@@ -47,9 +49,9 @@ function CardForm({ data, setData, input, setInput }) {
           name='number'
           placeholder='e.g. 1234 5678 9123 0000'
           maxLength={19}
-          value={input.number}
+          pattern='[0-9 ]{19}'
           onChange={(e) => onChange(e)}
-          pattern='[0-9 ]+{19}'
+          value={input.number}
           required
         />
         <div className='date-cvc'>
@@ -64,6 +66,7 @@ function CardForm({ data, setData, input, setInput }) {
                 maxLength={2}
                 onChange={(e) => onChange(e)}
                 pattern='0[1-9]|1[0-2]'
+                value={input.month}
                 required
               />
               <input
@@ -74,6 +77,7 @@ function CardForm({ data, setData, input, setInput }) {
                 maxLength={2}
                 onChange={(e) => onChange(e)}
                 pattern='[0-9]{2}'
+                value={input.year}
                 required
               />
             </div>
@@ -88,12 +92,14 @@ function CardForm({ data, setData, input, setInput }) {
               maxLength={3}
               onChange={(e) => onChange(e)}
               pattern='[0-9]{3}'
+              value={input.cvc}
               required
             />
           </div>
         </div>
         <button>Confirm</button>
       </form>
+      <Reset setData={setData} setInput={setInput} input={input} />
     </div>
   );
 }
