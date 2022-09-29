@@ -1,6 +1,11 @@
 .cards {
+  .card-front,
+  .card-back {
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+  }
   .card-front {
     position: relative;
+    border-radius: 1rem;
     .card-logo {
       width: 7rem;
       position: absolute;
@@ -28,6 +33,7 @@
   }
   .card-back {
     position: relative;
+    border-radius: 1rem;
     .cvc {
       font-family: 'Space-Grotesk';
       font-size: 1.8rem;

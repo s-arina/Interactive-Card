@@ -14,11 +14,7 @@ function CardFront({ data }) {
           </h3>
         </div>
       </div>
-      <img
-        src='/imgs/bg-card-front.png'
-        className='card-front'
-        alt='card front'
-      />
+      <img src='/imgs/bg-card-front.png' className='front' alt='card front' />
     </div>
   );
 }

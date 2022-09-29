@@ -1,5 +1,12 @@
+.cards .card-front,
+.cards .card-back {
+  -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+          box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
+}
+
 .cards .card-front {
   position: relative;
+  border-radius: 1rem;
 }
 
 .cards .card-front .card-logo {
@@ -40,6 +47,7 @@
 
 .cards .card-back {
   position: relative;
+  border-radius: 1rem;
 }
 
 .cards .card-back .cvc {
