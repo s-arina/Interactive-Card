@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../css/Modal.css';
 
 function Reset({ setData, setInput }) {
   const [modal, setModal] = useState(false);
@@ -10,7 +11,23 @@ function Reset({ setData, setInput }) {
 
   return (
     <div className='modal'>
-      <button onClick={() => setModal(true)}>Clear all</button>
+      <h3 className='modal-btn' onClick={() => setModal(!modal)}>
+        Clear all
+      </h3>
+      {modal && (
+        <div className='modal-confirm'>
+          <h3>Are you sure?</h3>
+          <button
+            onClick={() => {
+              setModal(false);
+              clearAll();
+            }}
+          >
+            Yes
+          </button>
+          <button onClick={() => setModal(false)}>No</button>
+        </div>
+      )}
     </div>
   );
 }

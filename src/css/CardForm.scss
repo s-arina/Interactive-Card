@@ -1,60 +1,66 @@
 .card-form {
-  #card-info {
-    font-family: 'Space-Grotesk';
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 1px;
-    width: 40rem;
+  .card-form-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    label {
-      margin-bottom: 1rem;
-    }
-    input {
-      margin-bottom: 2rem;
-      width: 100%;
-      padding: 1rem 1.5rem;
-      border-radius: 0.5rem;
-      border: 1px solid lightgrey;
-      &:focus {
-        outline: none;
-      }
-      &::placeholder {
-        font-family: 'Space-Grotesk';
-        color: darkgrey;
-      }
-    }
-    .date-cvc {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      input {
-        margin: 0;
-      }
-    }
-    .exp-date,
-    .cvc {
+    gap: 1rem;
+    #card-info {
+      font-family: 'Space-Grotesk';
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      width: 40rem;
       display: flex;
       flex-direction: column;
-      flex: 1;
-    }
+      justify-content: center;
+      label {
+        margin-bottom: 1rem;
+      }
+      input {
+        margin-bottom: 2rem;
+        width: 100%;
+        padding: 1rem 1.5rem;
+        border-radius: 0.5rem;
+        border: 1px solid lightgrey;
+        &:focus {
+          outline: none;
+        }
+        &::placeholder {
+          font-family: 'Space-Grotesk';
+          color: darkgrey;
+        }
+      }
+      .date-cvc {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        input {
+          margin: 0;
+        }
+      }
+      .exp-date,
+      .cvc {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
 
-    .date {
-      display: flex;
-      gap: 0.5rem;
+      .date {
+        display: flex;
+        gap: 0.5rem;
+      }
     }
-  }
-  button {
-    font-family: 'Space-Grotesk';
-    font-size: 1.6rem;
-    background-color: var(--very-dark-violet);
-    background-color: #21092f;
-    color: var(--offwhite);
-    border: none;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    margin-top: 3rem;
+    button {
+      font-family: 'Space-Grotesk';
+      font-size: 1.6rem;
+      background-color: var(--very-dark-violet);
+      background-color: #21092f;
+      color: var(--offwhite);
+      border: none;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin-top: 3rem;
+      cursor: pointer;
+    }
   }
 }
